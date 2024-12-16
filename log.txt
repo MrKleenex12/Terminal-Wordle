@@ -1,0 +1,64 @@
+5/1 - 30 min brainstorming and writting wordle.hpp 
+    - wrote wordle class and data members
+        -check_letter(), check_guess(), attempts, constructor, 
+         correct_word, and update_correct_word
+    
+    - commented explanation how text-based wordle works and commented for 
+      each function/variable
+
+    - 40 min testing stl set vs vector
+    - found 14000 word list for valid wordle words
+    - tested timing for cin with set and vector
+    - vector is still faster with linear searching by about .15s
+        - find for last element with vector was around .16s
+        - find for last element with set was around .31s
+        
+        NOTE-
+        overall vector was still faster with linear search because our wordle word list
+        was still relatively small compared to some word banks. I would definitely use a set
+        if my list was much larger(like 50,000 maybe). Even then. probing through a vector is really fast.
+        I think it also is faster when you search through once. I'm not sure if it is saving names in ram/cache to 
+        search faster?
+
+
+5/2 - 20 min writing wordle.cpp functions
+
+    - 5 min writing main.cpp header
+
+    - 30 min changing reading list of valid words from cin to find
+      (going back to cs102 yay!)
+
+    - 20 min looking up color text? possible game changer?
+
+    - 30 min settled on printed colored 0s with prinf. Created function print_color() and reset the check_guess function
+      Going to rethink on how to make check_guess function
+
+
+5/6 - 30 min writing making new check_guess function and loop for only 6 attempts
+
+    - 20 min writing input checking(5 letter words,non valid words, loops, in word bank) 
+    
+    - 2 freaking hours on error checking hints(double letters suck to give hints). I am just stupid idk lol. I tried 
+      functions like find_letter() that finds other double letters in a word. Idk why I am struggling on this so much.
+      there are different test cases I have to test. Sigh. I hate this.
+
+
+
+5/7 - 1.5 hr finally getting the hints part right. I used an array to store each character of the words. As I would check
+      for correct guesses, I would remove(change letter to '?) the correct character so double letters wouldn't count for just
+      one. 
+        - also worked on the loop for 6 guesses and correct guess
+
+      NOTE-
+      I chose to use arrays instead of sets because I did a lot of searching with sizes of 5 char. Traversing an array is really fast 
+      compared to using set at this small size. I felt like this was a fine choice.
+
+
+      - 2 hrs getting interactive loop. You can play as many games as you want.
+      Prints instructions at the start
+
+      - 30 min changing print color function. I changed it to print the letter instead of colored '0's
+
+      - 30 min adding list of usable letters. I decided to use a set since removing was quicker
+
+      - 15 min adding stats and making the game look cleaner
