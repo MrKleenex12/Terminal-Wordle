@@ -114,7 +114,7 @@ int main(int argc, char **argv) {
     string word_guess, input;
     int wins = 0;
     int games_played = 0;
-    int attempts_wins[6];
+    vector<int> attempts_wins(6);
 
     // While loop for game
     while(true){
