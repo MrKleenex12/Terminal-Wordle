@@ -1,23 +1,35 @@
-# Terminal-Wordle
+# Terminal Wordle
+**University of Tennessee – Knoxville**  
+**CS202 Spring 2024 Final Project**
 
-## University of Tennessee Knoxville CS202 Spring 24 Final Project
+## Overview
+**Terminal Wordle** is a command-line version of the popular game **Wordle**, developed for the CS202 final project. Players guess five-letter words and receive feedback via color-coded hints.
 
-### Start the program with ./main input/valid-wordle-words.txt input/shuffled_real_wordles.txt
+## How to Run
+To start the game, run the following command in your terminal:
+```bash
+./main input/valid-wordle-words.txt input/shuffled_real_wordles.txt
+```
 
-HINTS will be revealed as the letter in white, green, or yellow to reveal hints
-black doesn't show up with black background lol
+## How to Play
+After each guess, you'll receive a hint using the following format:
 
-### Example
+- `g` = **green**: correct letter, correct position  
+- `y` = **yellow**: correct letter, wrong position  
+- `w` = **white**: letter not in the word  
 
-Guess: c l e a r  
-Hint:  w w g w y  
-word:  t r e n d  
+**Example:**
+```
+Guess:  c l e a r  
+Hint:   w w g w y  
+Answer: t r e n d
+```
 
-### Rules
+This means:
+- `e` is in the correct position (green),
+- `r` is in the word but in the wrong position (yellow),
+- The rest are not in the word (white).
 
-Assume letters are the color of the initials underneath(w->white, y->yellow,
-g->green). These are the hints that you are given just like wordle.
-
-Entering 'new' will start a new game. List of instructions are displayed when 'help' is entered
-
-The rest of the game is pretty self explanatory if you have played wordle.
+## Commands
+- Type `new` to start a new game  
+- Type `help` to view the full list of instructions
